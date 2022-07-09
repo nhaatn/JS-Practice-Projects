@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="./index.js" defer></script>
+        <title>Navigation Bar</title>
+    </head>
+    <body>
+        <nav class="nav-container">
+            <h3 class="nav-header">Nav Logo</h3>
+            <ul class="links">
+                <li>
+                    <a href="#top" class="menu-list home" >Home</a>
+                </li>
+                <li>
+                    <a href="#news" class="menu-list" id="news">News</a>
+                </li>
+                <li>
+                    <a href="#contact" class="menu-list">Contact</a>
+                </li>
+                <li>
+                    <a href="#about" class="menu-list">About</a>
+                </li>
+            </ul>
+
+            <button class="nav-toggle">
+                <i class="fa fa-bars"></i>
+            </button>
+        </nav>
+
+        <div class="home-page page">Home page</div>
+        <div class="news-page page" id="news">News page</div>
+        <div class="contact-page page" id="contact">Contact page</div>
+        <div class="about-page page" id="about">About page</div>
+    </body>
+</html>
