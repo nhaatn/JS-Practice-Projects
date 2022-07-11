@@ -1,21 +1,31 @@
 const navToggle = document.querySelector(".nav-toggle");
-const links = document.querySelector(".links");
-// const singleLink = document.querySelectorAll('li a');
+const ul = document.querySelector("ul");
+const links = document.querySelectorAll('.links');
+const sections = document.querySelectorAll('section');
 
+// When clicking on hamburger menu it will display the navigation as a toggle
 navToggle.addEventListener("click", () => {
-    console.log(links.classList);
+    console.log(ul.classList);
 
-    // console.log(links.classList.contains('show-links'));
+    if (ul.classList.contains("show-links") === false) {
+        ul.classList.add("show-links");
+    } else ul.classList.remove("show-links");
 
-    if (links.classList.contains("show-links") === false) {
-        links.classList.add("show-links");
-    } else links.classList.remove("show-links");
-
-    console.log(links.classList.contains("show-links"));
+    console.log(ul.classList.contains("show-links"));
 });
 
-document.addEventListener("click", (event) => {
-    if (event.target.classList.contains("home")) {
-        event.target.classList.add("active");
-    }
-});
+
+// Iterate the list of sections from last to first until finding a match
+// Then remove .active class from all links
+// Then add it to the link at the active index
+function changeLinkState() {
+  let index = sections.length;
+
+  while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+  
+  links.forEach((link) => link.classList.remove('active'));
+  links[index].classList.add('active');
+}
+
+changeLinkState();
+window.addEventListener('scroll', changeLinkState);
