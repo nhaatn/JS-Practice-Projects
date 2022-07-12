@@ -25,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     padding: 2rem;
-    height: 50vh;
+    height: 70vh;
 }
 
 .side-container {
@@ -38,7 +38,9 @@
     /* Move sidebar to left to hide */
     transform: translate(-150%);
     /* display: none; */
+
 }
+
 
 .show-sidebar {
     transform: translate(0);
@@ -84,4 +86,27 @@ a:hover {
     justify-content: center;
     align-items: center;
     color: rgb(0, 255, 234);
+}
+
+
+/* I like to develop mobile first */
+/* Screens bigger than 800px */
+@media screen and (min-width: 800px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .side-container {
+        transform: translate(0);
+        
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 20vh;
+        width: 100vw;
+    }
+
+    .x-btn {
+        display: none;
+    }
 }
