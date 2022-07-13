@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pomodoro Timer</title>
+        <link rel="stylesheet" href="./style.css" />
+        <script src="./index.js" defer></script>
+    </head>
+    <body>
+        <audio id="myAudio" src="some_audio.mp3"></audio>
+        <div class="flex-container">
+            <div class="grid-container">
+                <p id="work" class="label">Work:</p>
+                <p id="break" class="label">Break:</p>
+                <p id="cycles" class="label">Cycles:</p>
+    
+                <!-- Work Timer -->
+                <div class="timer" id="work-timer">
+                    <p id="work_minutes">25</p>
+                    <p class="semicolon">:</p>
+                    <p id="work_seconds">00</p>
+                </div>
+    
+                <p class="timer" id="counter">0</p>
+    
+                <!-- Break Timer -->
+                <div class="timer" id="break-timer">
+                    <p id="break_minutes">10</p>
+                    <p class="semicolon">:</p>
+                    <p id="break_seconds">00</p>
+                </div>
+    
+                <button id="start" class="btn">START</button>
+                <button id="reset" class="btn">RESET</button>
+                <button id="pause" class="btn">PAUSE</button>
+            </div>
+        </div>
+
+    </body>
+</html>
